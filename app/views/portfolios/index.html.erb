@@ -9,6 +9,7 @@
 	<h4><%= portfolio.body %></h4>
 	<img src="<%= portfolio.thumb_img %>"> <br>
 
-	<%= link_to 'Edit', edit_portfolio_path(portfolio) %>
-	 
+	<%= link_to 'Edit', edit_portfolio_path(portfolio) %> | 
+	<%= link_to 'Delete', portfolio_path(portfolio), method: :delete, data: { confirm: 'Are you sure?'} %>
+
 <% end %>
