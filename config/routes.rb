@@ -9,7 +9,11 @@ Rails.application.routes.draw do
 
   get 'contact', to: 'pages#contact'
 
-  resources :posts
+  resources :posts do
+    member do
+      get :toggle_status
+    end
+  end
 
 
 
