@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_15_115435) do
+ActiveRecord::Schema.define(version: 2020_04_16_192422) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -64,7 +64,9 @@ ActiveRecord::Schema.define(version: 2020_04_15_115435) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "slug"
     t.integer "status", default: 0
+    t.bigint "topic_id", null: false
     t.index ["slug"], name: "index_posts_on_slug", unique: true
+    t.index ["topic_id"], name: "index_posts_on_topic_id"
   end
 
   create_table "skills", force: :cascade do |t|
@@ -74,4 +76,11 @@ ActiveRecord::Schema.define(version: 2020_04_15_115435) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "topics", force: :cascade do |t|
+    t.string "title"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  add_foreign_key "posts", "topics"
 end

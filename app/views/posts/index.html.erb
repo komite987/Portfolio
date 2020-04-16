@@ -7,6 +7,7 @@
     <tr>
       <th>Title</th>
       <th>Body</th>
+      <th>Topic</th>
       <th colspan="4"></th>
     </tr>
   </thead>
@@ -16,6 +17,7 @@
       <tr>
         <td><%= post.title %></td>
         <td><%= post.body %></td>
+        <td><%= post.topic.title %></td>
         <td><%= link_to post.status, toggle_status_post_path(post) %></td>
         <td><%= link_to 'Show', post %></td>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
