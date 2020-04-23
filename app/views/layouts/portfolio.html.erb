@@ -19,9 +19,8 @@
     <%= nav_links %>
 
     <%= yield %>
-    <% if session[:source] %>
-        <hr>
-        Thanks for visiting from <%= session[:source] %>
-    <% end %>
+
+    <%= source_method("portfolio") %>
+
   </body>
 </html>

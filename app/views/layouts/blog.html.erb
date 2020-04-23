@@ -21,9 +21,7 @@
 
     <%= render 'shared/navbar', location: 'bottom' %>
 
-    <% if session[:source] %>
-        <hr>
-        Thanks for visiting from <%= session[:source] %>
-    <% end %>
+    <%= source_method("Blog") %>
+
   </body>
 </html>
