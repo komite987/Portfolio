@@ -1,5 +1,5 @@
 class Portfolio < ApplicationRecord
-	has_many :technologies
+	has_many :technologies, dependent: :destroy
 	include Placeholder
 
   accepts_nested_attributes_for :technologies,
