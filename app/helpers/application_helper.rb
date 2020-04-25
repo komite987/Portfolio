@@ -16,4 +16,7 @@ module ApplicationHelper
     end
   end
 
+  def copyright_generator
+    KomaitViewTool::Renderer.copyright "Komait", "All rights reserved"
+  end
 end

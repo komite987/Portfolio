@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/komite987/komait_view_tool
+  revision: 275a9bb32e89c830e4d39e81fca6a8ada15f437f
+  specs:
+    komait_view_tool (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -205,6 +211,7 @@ DEPENDENCIES
   devise (~> 4.7, >= 4.7.1)
   friendly_id (~> 5.2.4)
   jbuilder (~> 2.7)
+  komait_view_tool!
   listen (>= 3.0.5, < 3.2)
   ostruct (~> 0.1.0)
   pg (>= 0.18, < 2.0)
