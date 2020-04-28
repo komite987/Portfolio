@@ -110,9 +110,14 @@ body {
 .card-body {
   color: black;
   text-align: left;
-  line-height: 18px;
+  line-height: 20px;
 }
 
 .auth-links a {
   color: black;
+}
+
+.login {
+  width: 25rem;
+  margin: 0 auto;
 }
