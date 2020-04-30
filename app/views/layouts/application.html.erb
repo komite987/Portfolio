@@ -1,25 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= @page_title %></title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    <meta name="keywords" content="<%= @seo_keywords %>" />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+<head>
+  <title><%= @page_title %></title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <meta name="keywords" content="<%= @seo_keywords %>" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-  <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= render 'shared/navbar', location: 'top' %>
-
-    <%= nav_links %>
+<body>
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column text-center">
+    <%= render 'shared/app_nav' %>
     <%= yield %>
+    <%= render 'shared/footer'%>
 
-    <%= copyright_generator %>
     <%= source_method("application") %>
-  </body>
+  </div>
+
+</body>
 </html>
