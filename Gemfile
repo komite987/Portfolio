@@ -30,7 +30,8 @@ gem 'ostruct', '~> 0.1.0'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'friendly_id', '~> 5.2.4'
 gem 'petergate', '~> 2.0', '>= 2.0.1'
-
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
+gem 'kaminari', '~> 1.2'
 gem 'komait_view_tool', git: 'https://github.com/komite987/komait_view_tool'
 
 group :development, :test do

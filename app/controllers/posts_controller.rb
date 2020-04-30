@@ -1,14 +1,14 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy, :toggle_status]
   layout "blog"
-  access all: [:show, :index], user: {except: [:destroy, :new, :edit, :update, :create]},
+  access all: [:show, :index], user: {except: [:destroy, :new, :edit, :update, :create, :toggle_status]},
         site_admin: :all
 
 
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    @posts = Post.page(params[:page]).per(5)
     @page_title = "My Portfolio | Blog"
   end
 
@@ -32,6 +32,7 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = Post.new(post_params)
+    @post.topic_id = "1"
 
     respond_to do |format|
       if @post.save
