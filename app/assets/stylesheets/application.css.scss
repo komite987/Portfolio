@@ -66,7 +66,8 @@ body {
 
 .nav-masthead .nav-link:hover,
 .nav-masthead .nav-link:focus {
-  border-bottom-color: rgba(255, 255, 255, .25);
+  color: white;
+  border-bottom-color: rgb(255, 255, 255);
 }
 
 .nav-masthead .nav-link + .nav-link {
@@ -120,4 +121,8 @@ body {
 .login {
   width: 25rem;
   margin: 0 auto;
+}
+
+.home-nav span {
+  margin: auto 12px;
 }
