@@ -8,6 +8,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <%= stylesheet_link_tag 'posts', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag '//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/le-frog/jquery-ui.min.css' %>
   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 
@@ -15,9 +16,9 @@
   <%= render 'shared/blog_nav' %>
 
   <main role="main" class="container">
-          <h1 class="pb-4 mb-4 font-italic border-bottom">
-        Our Posts
-      </h1>
+    <h1 class="pb-4 mb-4 font-italic border-bottom">
+      Our Posts
+    </h1>
 
     <div class="row">
       <%= yield %>
@@ -28,6 +29,6 @@
   <%= render 'shared/blog_footer' %>
 
 </body>
-  <%= source_method("Blog") %>
+<%= source_method("Blog") %>
 
 </html>
