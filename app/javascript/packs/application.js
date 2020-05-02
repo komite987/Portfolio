@@ -9,6 +9,8 @@ require("@rails/activestorage").start()
 require("channels")
 import "bootstrap"
 require("packs/html.sortable")
+require("packs/portfolio")
+
 import $ from 'jquery';
 
 global.$ = $
