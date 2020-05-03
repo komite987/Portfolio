@@ -1,0 +1,9 @@
+<h1 class="text-center header">Angular Portfolio items</h1>
+  <%= render 'shared/portfolio-jumbotron' if logged_in?(:site_admin)%>
+
+  <div class="container">
+    <div class="row ">
+      <%= render partial: 'portfolio_item', collection: @portfolio_items %>
+    </div>
+  </div>
+</div>

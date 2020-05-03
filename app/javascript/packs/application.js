@@ -9,6 +9,20 @@ require("@rails/activestorage").start()
 require("channels")
 import "bootstrap"
 require("packs/html.sortable")
+require("packs/portfolio")
+
+import $ from 'jquery';
+
+global.$ = $
+global.jQuery = $
+
+
+require('jquery-ui');
+// require('rails_sortable');
+
+// jquery-ui theme
+require.context('file-loader?name=[path][name].[ext]&context=node_modules/jquery-ui-dist!jquery-ui-dist', true,    /jquery-ui\.css/ );
+require.context('file-loader?name=[path][name].[ext]&context=node_modules/jquery-ui-dist!jquery-ui-dist', true,    /jquery-ui\.theme\.css/ );
 
 
 
@@ -18,3 +32,7 @@ require("packs/html.sortable")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+// $(function () {
+//   $('.sortable').railsSortable();
+// });
