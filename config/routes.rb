@@ -6,6 +6,10 @@ Rails.application.routes.draw do
   end
 	get 'portfolio/:id', to: 'portfolios#show', as: 'portfolio_show'
 
+  get 'portfolios/angular', to: 'portfolios#angular'
+  get 'portfolios/rails', to: 'portfolios#rails'
+
+
   root 'pages#home'
 
   get 'about', to: 'pages#about'
