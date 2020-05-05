@@ -34,6 +34,9 @@ gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
 gem 'kaminari', '~> 1.2'
 gem 'komait_view_tool', git: 'https://github.com/komite987/komait_view_tool'
 gem 'rails_sortable', '~> 1.4'
+gem 'carrierwave'
+gem 'cloudinary'
+gem 'mini_magick', '~> 4.10', '>= 4.10.1'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

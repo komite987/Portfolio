@@ -3,7 +3,7 @@
 <div class="container header">
 	<div class="row">
 		<div class="col-md-7">
-			<img src="<%= @portfolio_item.main_img %>">
+			<%= image_tag("#{@portfolio_item.main_img}", style: 'width:100%') %>
 
 		</div>
 		<div class="col-md-5">

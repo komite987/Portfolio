@@ -13,14 +13,18 @@
 </head>
 
 <body>
+  <div id="background"></div>
   <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column text-center">
     <div id="background"></div>
+    <%#= video_tag('world.mp4',
+    id: 'background',
+    autoplay: true,
+    loop: true,
+    muted: true,) %>
     <%= render 'shared/app_nav' %>
     <%= yield %>
     <%= render 'shared/footer'%>
-
     <%= source_method("application") %>
   </div>
-
 </body>
 </html>

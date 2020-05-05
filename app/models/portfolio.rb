@@ -1,9 +1,8 @@
 class Portfolio < ApplicationRecord
 	has_many :technologies, dependent: :destroy
-	include Placeholder
 
     include RailsSortable::Model
-    set_sortable :set_sortable
+    set_sortable :sort
 
     def self.by_position
         order("position ASC")        
@@ -14,6 +13,9 @@ class Portfolio < ApplicationRecord
 
     validates_presence_of :title, :body, :main_img, :thumb_img
 
+    mount_uploader :thumb_img, PortfolioUploader
+    mount_uploader :main_img, PortfolioUploader
+
 
     def self.angular
     	Portfolio.where(subtitle: "Angular")    	
@@ -21,11 +23,6 @@ class Portfolio < ApplicationRecord
 
     scope :Ruby_on_rails, -> { where(subtitle: "Ruby on Rails")}
 
-    after_initialize :set_default
 
-    def set_default
-    	self.main_img ||= Placeholder.image_generator(width: '600', height: '300')
-    	self.thumb_img ||= Placeholder.image_generator(width: "300", height: "200")
-    end
 end
 

@@ -73,6 +73,8 @@ private
 		params.require(:portfolio).permit(:title,
 																			:subtitle,
 																			:body,
+																			:main_img,
+																			:thumb_img,
 																			technologies_attributes: [:name])
 	end
 
