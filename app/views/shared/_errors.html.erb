@@ -1,0 +1,10 @@
+  <% if obj.errors.any? %>
+    <div class="alert alert-danger" role= "alert" >
+              <button class="close" data-dismiss= "alert">x</button>
+
+      <h5><%= pluralize(obj.errors.count, "Error") %> found:</h5>
+        <% obj.errors.full_messages.each do |message| %>
+          <h6><strong><%= message %></strong> </h6>
+        <% end %>
+    </div>
+  <% end %>
