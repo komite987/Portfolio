@@ -72,7 +72,7 @@ class PostsController < ApplicationController
     elsif @post.draft?
         @post.published!
     end
-    redirect_to posts_url, notice: 'Post status was successfully updated.'
+    redirect_to posts_url, alert: 'Post status was successfully updated.'
   end
 
   private
