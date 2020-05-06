@@ -81,6 +81,7 @@ GEM
     cloudinary (1.13.2)
       aws_cf_signer
       rest-client
+    cocoon (1.2.14)
     coderay (1.1.2)
     concurrent-ruby (1.1.6)
     crass (1.0.6)
@@ -264,6 +265,7 @@ DEPENDENCIES
   byebug
   carrierwave
   cloudinary
+  cocoon
   devise (~> 4.7, >= 4.7.1)
   font-awesome-rails (~> 4.7, >= 4.7.0.5)
   friendly_id (~> 5.2.4)
