@@ -13,7 +13,7 @@ class Portfolio < ApplicationRecord
     end
 
 
-    validates_presence_of :title, :body, :main_img, :thumb_img
+    validates_presence_of :title, :body
 
     mount_uploader :thumb_img, PortfolioUploader
     mount_uploader :main_img, PortfolioUploader

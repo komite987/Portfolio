@@ -10,8 +10,4 @@ class PortfolioUploader < CarrierWave::Uploader::Base
     %w(jpg jpeg gif png)
   end
 
-  # def public_id
-  #   return model.title
-  # end  
-
 end
