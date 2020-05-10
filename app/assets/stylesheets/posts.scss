@@ -84,7 +84,7 @@ h1, h2, h3, h4, h5, h6 {
 /*
  * Blog posts
  */
-.blog-post {
+ .blog-post {
   margin-bottom: 4rem;
 }
 .blog-post-title {
@@ -99,7 +99,7 @@ h1, h2, h3, h4, h5, h6 {
 /*
  * Footer
  */
-.blog-footer {
+ .blog-footer {
   padding: 2.5rem 0;
   color: #999;
   text-align: center;
@@ -124,3 +124,10 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 3px solid grey;
 }
 
+.font-italic {
+  padding-bottom: 0 !important;
+}
+
+.show-link {
+  padding-top: 15px;
+}

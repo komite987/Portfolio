@@ -1,14 +1,21 @@
 <div class="col-md-8 blog-main">
+  <div class="row">
+    <div class="col-md-8">
+      <h1 class="pb-4 mb-4 font-italic">
+        <%= @post.title %>
+      </h1>
 
-  <h1 class="pb-4 mb-4 font-italic border-bottom">
-    <%= @post.title %>
-  </h1>
+    </div>
+    <div class="col-md-4 show-link">
+      <%= link_to 'Back', posts_path %> 
+      <% if logged_in?(:site_admin) %>
+      | <%= link_to 'Edit', edit_post_path(@post)  %> |
+      <%= link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <% end %>
+
+    </div>
+  </div>
   <p>
     <%= @post.body %>
   </p>
-  <%= link_to 'Back', posts_path %> 
-  <% if logged_in?(:site_admin) %>
-  | <%= link_to 'Edit', edit_post_path(@post)  %> |
-  <%= link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure?' } %>
-  <% end %>
 </div>
