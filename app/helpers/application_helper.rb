@@ -33,7 +33,8 @@ module ApplicationHelper
       {url: about_path, title: 'About Me'},
       {url: contact_path, title: 'Contact us'},
       {url: posts_path, title: 'Blog'},
-      {url: portfolios_path, title: 'Portfolio'}
+      {url: portfolios_path, title: 'Portfolio'},
+      {url: tech_news_path, title: 'Rails Tweets'}
     ]
   end
   
